@@ -1,64 +1,91 @@
-# Floretum - a flower observation catalogue.
+# Floretum - a plant observation catalogue
 
-## End-user brief
+## End-user statement
 
-I go on lots of countryside walks, and enjoy admiring the flowers as the seasons go by. I would like to document my observations of flowers in various locations throughout the year.
+I go on lots of countryside walks, and enjoy admiring the flowers as the seasons go by. I would like to document my observations of flowers, and plants in general, in various locations throughout the year.
 
-Every time I see a flower or group of flowers, I would like to record the flower I saw, where I saw it, when I saw it, and optionally upload a photograph. 
+Every time I see a plant, I would like to record its species, where I saw it, when I saw it, and optionally upload a photograph. 
 
-I would like a dashboard overview where I can see all of my recorded observations, and be able to sort them alphabetically and by time of observation.
+I would like a dashboard overview where I can see all of my recorded observations, and be able to sort them alphabetically by species and time of observation.
 
-### It would be nice if...
+I would like to be able to view, edit, and delete observations as needed.
 
-- There was autocomplete for the name of the flower and the location of the observation.
-- I could upload a photograph of the flower I saw, and the species was recognised and populated in the name field.
-- EXIF data from my photograph, if available, was used to populate the location field.
-- I could view all of my recorded observations on a map.
-- I could upload a group of photos and have multiple observation records be automatically created.
+It would be fantastic if I could search for and autocomplete the location of my observation all in the application.
 
-## Technical requirements
+Some times I don't quite know what I've seen. I'd love to be able to upload a photograph of an observation, and have the application recognise and fill in the species.
 
-##### MVP
+I'd like the flexibility of recording observations whenever I want, even if it's a little while after the fact. Filling in time and location information becomes more difficult, so I would like information from photographs I upload to be used to fill in the time and location of the respective observation.
 
-- A web app that allows users to document their observations of flowers in various locations throughout the year.
-- The user will be able to:
-  - Create a user account 
-  - Log into their user account
-  - Add an observation, inputting:
-    - Flower species
-    - Observation location
-    - Observation time
-    - Photograph of flower
-  - View a list of their observations
-  - Sort this list by:
-    - Alphabetical order
-    - Observation time
-  - View individual observations
-  - Edit observation data
+I would also like to be able to see all of my recorded observations presented neatly on a map.
 
----
+I'd like to access my observations over a wide range of devices, so I would like the application to be a web app.
 
-##### Extensions
+## Specification
 
-- Autocomplete input for flower species and observation location.
-- Identify flowers from the uploaded photograph, and populate the identified species in the "Flower species" field.
-- Populate the observation location and time fields using EXIF data from the uploaded photograph.
-- Visualise all observations on an interactive map.
+### Overview
 
-## Information overview
+A web application that allows users to document their observations of plants in various locations throughout the year.
 
-- **User account**
+### User requirements
+
+#### Minimum viable product
+
+- Record plant observations: species, observation location, observation time, and an uploaded photograph
+- View a list of all recorded observations, sorted alphabetically by species or date/time
+- View, edit and delete individual observations.
+
+#### Further enhancements
+
+- Autocomplete observation locations
+- Plant species recognition from uploaded photograph
+- Observation location and date/time detection from photo EXIF data
+- View observations on an interactive map
+
+### Technical requirements
+
+#### Minimum viable product
+
+- Allow user to create an account
+- Allow user to log into account
+- Allow logged in user to create new observations
+- Allow logged in user to view list of own observations
+- Allow logged in user to sort observations alphabetically by species
+- Allow logged in user to sort observations by date/time
+- Allow logged in user to view own individual observations
+- Allow logged in user to edit own observations
+- Allow logged in user to delete own observations
+
+#### Further enhancements
+
+- Allow logged in user to autocomplete observation location field using an API
+- Allow logged in user to send uploaded photograph to a plant recognition API and return result into the species field
+- Allow logged in user to populate observation location and date/time fields from uploaded photograph EXIF data 
+- Allow logged in user to view observations on an interactive map
+
+### Data model
+
+- **User**
   - Username
   - Password
-  - List of observations
+
 - **Observation**
-  - Observer (user account)
   - Flower species
   - Observation location
   - Observation time
   - Photograph of flower
 
-## 
+### Technology stack
+
+- Frontend: React
+- Backend: FastAPI
+- Database: MongoDB
+
+Third-party APIs/Libraries:
+
+- Flower recognition API: Plant.id
+- EXIF data library: Pillow
+- Map integration: Leaflet
+- Location autocomplete API: Pelias
 
 
 
