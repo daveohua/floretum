@@ -41,6 +41,9 @@ A web application that allows users to document their observations of plants in 
 - Observation time: date
 - Photograph: image file
 
+### Relationships
+User < Observation (one to many)
+
 ### Technology stack
 
 - Frontend: React
