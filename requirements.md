@@ -23,16 +23,35 @@ A web application that allows users to document their observations of plants in 
 
 #### Minimum viable product
 
-- N1: Allow user to create an account
-- N2: Allow user to log into account
-- N3: Allow user to edit account information
-- N4: Allow user to only view and edit own observations
+- N1: Create fully normalised database with tables
+- N2: Allow user to create an account
+- N3: Allow user to log into account
+- N4: Allow user to edit account information
+- N5: Allow user to only view and edit own observations
+
+### Information overview
+
+#### User
+- Username: text
+- Password hash: text
+
+#### Observation
+- Plant species: text
+- Observation location: GPS co-ordinate
+- Observation time: date
+- Photograph: image file
 
 ### Technology stack
 
 - Frontend: React
+  - Backend API interface: Fetch API
 - Backend: FastAPI
+  - Database interface: SQLModel
 - Database: SQLite
+
+![technology_stack drawio](https://github.com/daveohua/floretum/assets/44324755/0d6232eb-9dea-4258-98f2-78300b7ccbca)
+
+
 
 Third-party APIs/Libraries:
 
@@ -40,5 +59,3 @@ Third-party APIs/Libraries:
 - EXIF data library: Pillow
 - Map integration: Leaflet
 - Location autocomplete API: Pelias
-
-## 
