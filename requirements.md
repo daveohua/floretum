@@ -49,13 +49,13 @@ User < Observation (one to many)
 ### Technology stack
 
 - Frontend: React
-  - Backend API interface: Fetch API
+  - Backend API interface: Javascript Fetch API
 - Backend: FastAPI
-  - Database interface: SQLModel
+  - Database interface: Python sqlite3
 - Database: SQLite
 
-![technology_stack drawio](https://github.com/daveohua/floretum/assets/44324755/0d6232eb-9dea-4258-98f2-78300b7ccbca)
 
+![technology_stack drawio-2](https://github.com/daveohua/floretum/assets/44324755/fdb00193-a43d-4695-9ce6-ccaa4f0a5815)
 
 
 Third-party APIs/Libraries:
