@@ -28,6 +28,7 @@ A web application that allows users to document their observations of plants in 
 - N3: Allow user to log into account
 - N4: Allow user to edit account information
 - N5: Allow user to only view and edit own observations
+- N6: Store uploaded photograph in filesystem, and generate reference to store in database
 
 ### Information overview
 
